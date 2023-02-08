@@ -28,15 +28,60 @@ export function Game() {
     }
 
     async function getDiscordUser(adsId: string) {
-        fetch(`http://192.168.1.3:3333/ads/${adsId}/discord`)
-            .then(response => response.json())
-            .then(data => setDiscordDuoSelected(data.discord))
+        // fetch(`http://localhost:8080/ads/${adsId}/discord`)
+        //     .then(response => response.json())
+        //     .then(data => setDiscordDuoSelected(data.discord))
+        setDiscordDuoSelected('Andrey#Disc')
     }
 
     useEffect(() => {
-        fetch(`http://192.168.1.3:3333/games/${game.id}/ads`)
-            .then(response => response.json())
-            .then(data => setDuos(data))
+        // fetch(`http://localhost:8080/games/${game.id}/ads`)
+        //     .then(response => response.json())
+        //     .then(data => setDuos(data))
+        setDuos([
+            {
+                "id": "1c95f582-c8d0-4873-9f7f-a3ee9bf77b2d",
+                "name": "AndreyCs",
+                "weekDays": [
+                    "0",
+                    "1",
+                    "2",
+                    "5",
+                    "6"
+                ],
+                "useVoiceChannel": true,
+                "yearsPlaying": 1,
+                "hourStart": "10:00",
+                "hourEnd": "12:00"
+            },
+            {
+                "id": "5136fa12-73d5-46e3-87b3-5b78e27a6dd3",
+                "name": "Sei la",
+                "weekDays": [
+                    "1",
+                    "4",
+                    "5",
+                    "6"
+                ],
+                "useVoiceChannel": false,
+                "yearsPlaying": 10,
+                "hourStart": "18:00",
+                "hourEnd": "22:00"
+            },
+            {
+                "id": "6b8eb790-6e63-4e46-8b91-1c902792a9cd",
+                "name": "Heeija",
+                "weekDays": [
+                    "0",
+                    "5",
+                    "6"
+                ],
+                "useVoiceChannel": true,
+                "yearsPlaying": 6,
+                "hourStart": "18:00",
+                "hourEnd": "22:00"
+            }
+        ])
     }, [])
 
     return (

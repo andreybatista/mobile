@@ -8,7 +8,7 @@
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#121214"
     },
     "updates": {
@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#121214"
-      }
+      },
+      "package": "com.andreycode.mobile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "096612ec-2d6b-4cae-9a21-9849b933ce02"
+      }
     }
   }
 }
